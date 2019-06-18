@@ -15,6 +15,11 @@
 		EAE8BDB822B2229E00C80004 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE8BDB722B2229E00C80004 /* main.m */; };
 		EAE8BDC222B2229E00C80004 /* OpenGLES___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE8BDC122B2229E00C80004 /* OpenGLES___Tests.m */; };
 		EAE8BDCD22B2229E00C80004 /* OpenGLES___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE8BDCC22B2229E00C80004 /* OpenGLES___UITests.m */; };
+		EAE8BDE122B222B500C80004 /* GLESUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE8BDDB22B222B500C80004 /* GLESUtils.m */; };
+		EAE8BDE222B222B500C80004 /* GLESMath.c in Sources */ = {isa = PBXBuildFile; fileRef = EAE8BDDD22B222B500C80004 /* GLESMath.c */; };
+		EAE8BDE522B2231300C80004 /* ZBView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE8BDE422B2231300C80004 /* ZBView.m */; };
+		EAE8BDEB22B26F1100C80004 /* shaderv.glsl in Resources */ = {isa = PBXBuildFile; fileRef = EAE8BDEA22B26F1100C80004 /* shaderv.glsl */; };
+		EAE8BDED22B26F1A00C80004 /* shaderf.glsl in Resources */ = {isa = PBXBuildFile; fileRef = EAE8BDEC22B26F1A00C80004 /* shaderf.glsl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,16 @@
 		EAE8BDC822B2229E00C80004 /* OpenGLES_索引UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OpenGLES_索引UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE8BDCC22B2229E00C80004 /* OpenGLES___UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OpenGLES___UITests.m"; sourceTree = "<group>"; };
 		EAE8BDCE22B2229E00C80004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE8BDDB22B222B500C80004 /* GLESUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLESUtils.m; sourceTree = "<group>"; };
+		EAE8BDDC22B222B500C80004 /* Quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quaternion.h; sourceTree = "<group>"; };
+		EAE8BDDD22B222B500C80004 /* GLESMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GLESMath.c; sourceTree = "<group>"; };
+		EAE8BDDE22B222B500C80004 /* GLESUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESUtils.h; sourceTree = "<group>"; };
+		EAE8BDDF22B222B500C80004 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		EAE8BDE022B222B500C80004 /* GLESMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESMath.h; sourceTree = "<group>"; };
+		EAE8BDE322B2231300C80004 /* ZBView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBView.h; sourceTree = "<group>"; };
+		EAE8BDE422B2231300C80004 /* ZBView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBView.m; sourceTree = "<group>"; };
+		EAE8BDEA22B26F1100C80004 /* shaderv.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = shaderv.glsl; sourceTree = "<group>"; };
+		EAE8BDEC22B26F1A00C80004 /* shaderf.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = shaderf.glsl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +116,15 @@
 		EAE8BDA722B2229D00C80004 /* OpenGLES_索引 */ = {
 			isa = PBXGroup;
 			children = (
+				EAE8BDDA22B222B500C80004 /* Utils */,
 				EAE8BDA822B2229D00C80004 /* AppDelegate.h */,
 				EAE8BDA922B2229D00C80004 /* AppDelegate.m */,
 				EAE8BDAB22B2229D00C80004 /* ViewController.h */,
 				EAE8BDAC22B2229D00C80004 /* ViewController.m */,
+				EAE8BDE322B2231300C80004 /* ZBView.h */,
+				EAE8BDE422B2231300C80004 /* ZBView.m */,
+				EAE8BDEA22B26F1100C80004 /* shaderv.glsl */,
+				EAE8BDEC22B26F1A00C80004 /* shaderf.glsl */,
 				EAE8BDAE22B2229D00C80004 /* Main.storyboard */,
 				EAE8BDB122B2229E00C80004 /* Assets.xcassets */,
 				EAE8BDB322B2229E00C80004 /* LaunchScreen.storyboard */,
@@ -130,6 +150,19 @@
 				EAE8BDCE22B2229E00C80004 /* Info.plist */,
 			);
 			path = "OpenGLES_索引UITests";
+			sourceTree = "<group>";
+		};
+		EAE8BDDA22B222B500C80004 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EAE8BDDB22B222B500C80004 /* GLESUtils.m */,
+				EAE8BDDC22B222B500C80004 /* Quaternion.h */,
+				EAE8BDDD22B222B500C80004 /* GLESMath.c */,
+				EAE8BDDE22B222B500C80004 /* GLESUtils.h */,
+				EAE8BDDF22B222B500C80004 /* Vector.h */,
+				EAE8BDE022B222B500C80004 /* GLESMath.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE8BDB522B2229E00C80004 /* LaunchScreen.storyboard in Resources */,
+				EAE8BDEB22B26F1100C80004 /* shaderv.glsl in Resources */,
 				EAE8BDB222B2229E00C80004 /* Assets.xcassets in Resources */,
 				EAE8BDB022B2229D00C80004 /* Main.storyboard in Resources */,
+				EAE8BDED22B26F1A00C80004 /* shaderf.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +299,9 @@
 			files = (
 				EAE8BDAD22B2229D00C80004 /* ViewController.m in Sources */,
 				EAE8BDB822B2229E00C80004 /* main.m in Sources */,
+				EAE8BDE522B2231300C80004 /* ZBView.m in Sources */,
+				EAE8BDE222B222B500C80004 /* GLESMath.c in Sources */,
+				EAE8BDE122B222B500C80004 /* GLESUtils.m in Sources */,
 				EAE8BDAA22B2229D00C80004 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +475,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "OpenGLES_索引/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "OpenGLES_索引/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

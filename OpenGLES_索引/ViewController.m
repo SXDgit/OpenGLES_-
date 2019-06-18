@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "ZBView.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) ZBView *zbView;
 
 @end
 
@@ -16,7 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.zbView = [[ZBView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:self.zbView];
+    
 }
 
 
